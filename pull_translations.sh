@@ -14,20 +14,20 @@
 
 # SAMPLE OF CONFIG FILE
 #-----------------------------------------------------------------------------------------------
-
 ## Transifex project name (from Transifex settings -> project url)
-## (Note: Delete auto generated .tx folder whenever this project name changes)
 #PROJECT='akvo-foundation/akvo-flow-mobile'
 
 ## list of languages (es,fr,hi,...) (or empty string to pull all languages)
 #LANGUAGES='es,fr,hi,id,km,ne,pt,vi'
 
 ## path to the project res folder where the files should be updated
-#PROJECT_RES_FOLDER='/akvo-flow-mobile/app/src/main/res'
+#PROJECT_RES_FOLDER='/home/user/akvo-flow-mobile/app/src/main/res'
 #-----------------------------------------------------------------------------------------------
 
 # 2. Run command: sh pull_translations.sh
 # 3. The project res folder will be updated with latest translation files from Transifex
+
+# NOTE: Delete auto generated .tx folder whenever any configuration or setting changes
 
 . ./local_pull_translations.cfg
 
