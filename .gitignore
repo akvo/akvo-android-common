@@ -1,0 +1,6 @@
+# local config files
+local_*
+
+# folders created by transifex
+.tx/
+translations/
