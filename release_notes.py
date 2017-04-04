@@ -96,9 +96,11 @@ try:
         f.write('Date: ' + time.strftime("%d %B %Y") + '\n')
 
         for label in LABELS:
-            f.write('\n# ' + label.strip() + '\n')
+            label = label.strip()
 
-            for issue in load_issues(API_URL + '"' + label.strip().replace(" ", "+") + '"'):
+            f.write('\n# ' + label + '\n')
+
+            for issue in load_issues(API_URL + '"' + label.replace(" ", "+") + '"'):
                 f.write('* **{}** - [#{}]({})\n'.format(
                     issue['title'], issue['number'], issue['html_url']))
 
