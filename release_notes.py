@@ -22,7 +22,7 @@ milestone = 2.2.11
 labels = New and noteworthy, Resolved issues
 -----------------------------------------------------------------------
 
-2. Run command: python release-notes.py
+2. Run command: python release_notes.py
 3. The release notes file is generated in temp folder and opened in default editor
 
 """
@@ -96,9 +96,9 @@ try:
         f.write('Date: ' + time.strftime("%d %B %Y") + '\n')
 
         for label in LABELS:
-            f.write('\n# ' + label + '\n')
+            f.write('\n# ' + label.strip() + '\n')
 
-            for issue in load_issues(API_URL + '"' + label.replace(" ", "+") + '"'):
+            for issue in load_issues(API_URL + '"' + label.strip().replace(" ", "+") + '"'):
                 f.write('* **{}** - [#{}]({})\n'.format(
                     issue['title'], issue['number'], issue['html_url']))
 
